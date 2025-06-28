@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jornal Notícias Inovadoras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      display: grid;
+      grid-template-areas:
+        "header"
+        "content"
+        "footer";
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #1c1c3c;
+      color: white;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffcc00;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content {
+      grid-area: content;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    article {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 5px;
+    }
+
+    article img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    aside.publicidade {
+      background-color: #f0e68c;
+      padding: 20px;
+      text-align: center;
+      border: 2px dashed #999;
+      border-radius: 5px;
+      height: fit-content;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #1c1c3c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📰 Notícias Inovadoras</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Política</a>
+      <a href="#">Esportes</a>
+      <a href="#">Cultura</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <article>
+      <h2>Nova tecnologia promete reduzir emissão de carbono em 50%</h2>
+      <p><strong>Publicado em:</strong> 17 de Junho de 2025</p>
+
+      <img src="https://via.placeholder.com/800x400" alt="Imagem ilustrativa da notícia sobre tecnologia verde" />
+
+      <p>
+        Uma equipe de pesquisadores brasileiros desenvolveu um novo processo industrial capaz de reduzir pela metade
+        a emissão de gases poluentes na atmosfera. A inovação, que deve chegar ao mercado em 2026, promete ser um marco
+        na luta contra o aquecimento global.
+      </p>
+
+      <p>
+        “Com essa tecnologia, conseguimos otimizar o consumo de energia e utilizar materiais recicláveis em larga escala”,
+        afirma a coordenadora do projeto, Dra. Ana Beatriz.
+      </p>
+    </article>
+
+    <aside class="publicidade">
+      <p><strong>Publicidade</strong></p>
+      <p>Anuncie sua empresa aqui! Alcance milhares de leitores por dia.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Jornal Notícias Inovadoras — Todos os direitos reservados.</p>
+    <p>Contato: redacao@noticiasinovadoras.com.br</p>
+  </footer>
+
+</body>
+</html>
