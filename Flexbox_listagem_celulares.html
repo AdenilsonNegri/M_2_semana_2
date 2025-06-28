@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Listagem de celulares</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      color: #333;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e6f0ff;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      td:before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #333;
+      }
+
+      td:nth-of-type(1):before { content: "Marca"; }
+      td:nth-of-type(2):before { content: "Modelo"; }
+      td:nth-of-type(3):before { content: "Cor"; }
+      td:nth-of-type(4):before { content: "Valor (R$)"; }
+      td:nth-of-type(5):before { content: "Estado"; }
+      td:nth-of-type(6):before { content: "Demais informações"; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Listagem de celulares</h1>
+
+  <div class="container">
+    <h2>Celulares cadastrados</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Cor</th>
+          <th>Valor (R$)</th>
+          <th>Estado</th>
+          <th>Demais informações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Samsung</td>
+          <td>Galaxy S22</td>
+          <td>Preto</td>
+          <td>3.500</td>
+          <td>Novo</td>
+          <td>Com nota fiscal e garantia de 1 ano</td>
+        </tr>
+        <tr>
+          <td>iPhone</td>
+          <td>13 Pro</td>
+          <td>Prata</td>
+          <td>5.000</td>
+          <td>Usado</td>
+          <td>Em ótimo estado, sem riscos</td>
+        </tr>
+        <tr>
+          <td>Motorola</td>
+          <td>Edge 30</td>
+          <td>Azul</td>
+          <td>2.200</td>
+          <td>Novo</td>
+          <td>Desbloqueado para todas operadoras</td>
+        </tr>
+        <tr>
+          <td>LG</td>
+          <td>K62</td>
+          <td>Vermelho</td>
+          <td>1.000</td>
+          <td>Usado</td>
+          <td>Com capa protetora inclusa</td>
+        </tr>
+        <tr>
+          <td>Xiaomi</td>
+          <td>Redmi Note 11</td>
+          <td>Cinza</td>
+          <td>1.500</td>
+          <td>Novo</td>
+          <td>Carregador turbo incluso</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
